@@ -210,7 +210,7 @@ int main ()
 }
 ```
 ## week3 正課
-##week-1
+## week3-1
 ```c
 #include <stdio.h>
 int a[5]={0,10,20,30,40};
@@ -223,7 +223,7 @@ int main ()
     *p=666;
 }
 ```
-##week-2
+## week3-2
 ```c
 void printAll()
 {
@@ -248,7 +248,7 @@ int main ()
 
 
 ```
-##week-3
+## week3-3
 ```c
 #include <stdio.h>
 int a[10]={0,10,20,30,40,50,60,70,80,90};
