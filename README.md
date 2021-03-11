@@ -210,3 +210,68 @@ int main ()
 }
 ```
 ## week3 正課
+##week-1
+```c
+#include <stdio.h>
+int a[5]={0,10,20,30,40};
+int main ()
+{
+    int *p=&a[2];
+    *p=222;
+
+    p=p+2;
+    *p=666;
+}
+```
+##week-2
+```c
+void printAll()
+{
+    for(int i=0;i<5;i++)
+    {
+        printf("%d ",a[i]);
+    }
+    printf("\n");
+}
+int main ()
+{
+    int *p=&a[2];
+    *p=222;
+            printAll();
+    p=p+2;
+    *p=666;
+            printAll();
+    p--;
+    *p=555;
+            printAll();
+}
+
+
+```
+##week-3
+```c
+#include <stdio.h>
+int a[10]={0,10,20,30,40,50,60,70,80,90};
+void printAll()
+{
+    for(int i=0;i<10;i++)
+    {
+        printf("%3d ",a[i]);
+    }
+    printf("\n");
+}
+int main ()
+{
+    int *p=&a[2];
+    *p=200;
+            printAll();
+    int *p2=p+4;
+    *p2=666;
+            printAll();
+    p2--;
+    *p2=555;
+            printAll();
+    return 0;
+}
+
+```
