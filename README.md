@@ -1,4 +1,5 @@
 # 2020cce
+## week1 實習課練習
 ## 第一題-進階題：分式化簡 
 ```c
 #include <stdio.h>
@@ -140,7 +141,7 @@ int main ()
 	else printf("F\n");
 }
 ```
-
+## week2正課
 ## 指標1
 ```c
 #include <stdio.h>
@@ -208,3 +209,4 @@ int main ()
     return 0;
 }
 ```
+## week3 正課
