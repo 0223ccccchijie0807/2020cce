@@ -291,3 +291,165 @@ int main ()
 }
 
 ```
+## week3實習課
+
+## 進階題：大小寫轉換 
+
+```c
+#include <stdio.h>
+int main ()
+{
+	char a[100];
+	scanf("%s",&a);
+	for(int i=0;a[i]!=0;i++)
+	{
+		if(a[i]>=65 && a[i]<=90)
+		{
+			printf("%c",a[i]+32);
+		}
+		else if(a[i]>=97 && a[i]<=122)
+		{
+			printf("%c",a[i]-32);
+		}
+		else printf("%c",a[i]);
+	}
+	printf("\n");
+	
+}
+```
+## 進階題：漸增數列相加 
+```c
+#include <stdio.h>
+int main ()
+{
+	int n;
+	scanf("%d",&n);
+	int ans=0;
+	for(int i=2;i<=n;i++)
+	{
+		ans=ans+(i-1)*i;
+	}
+	printf("%d\n",ans);
+}
+
+```
+
+## 進階題：計算陣列的平方值 
+```c
+#include <stdio.h>
+int a[10];
+int main ()
+{
+	scanf("%d",&a[0]);
+	for(int i=1;i<=a[0];i++)
+	{
+		scanf("%d",&a[i]);
+		printf("%d,",a[i]*a[i]);
+	}
+	printf("\n");
+	
+}
+
+```
+
+## 進階題：2進位轉10進位 
+```c
+#include <stdio.h>
+int main ()
+{
+	int n;
+	scanf("%d",&n);
+	int ans=0;
+	ans=ans+n%10;
+	if(n%100>=10) ans=ans+2;
+	if(n/100==1) ans=ans+4;
+	if(n/100==10) ans=ans+8;
+	if(n/100==11) ans=ans+12;
+	printf("%d\n",ans);
+}
+```
+
+## 基礎題：計算幾週與幾天 
+
+```c
+#include <stdio.h>
+int main ()
+{
+	int n;
+	scanf("%d",&n);
+	int ans=0;
+	ans=ans+n%10;
+	if(n%100>=10) ans=ans+2;
+	if(n/100==1) ans=ans+4;
+	if(n/100==10) ans=ans+8;
+	if(n/100==11) ans=ans+12;
+	printf("%d\n",ans);
+}
+```
+
+## 基礎題：計程車資計算 
+
+```c
+#include <stdio.h>
+int main ()
+{
+	int n;
+	scanf("%d",&n);
+	if(n<=2000) printf("100\n");
+	else if(n>2000)
+	{
+		printf("%d\n",100+(n-2000)/500*5+5);
+	}
+}
+```
+
+## 基礎題：兩數間可被5整除的整數
+```c
+#include <stdio.h>
+int main ()
+{
+	int a,b;
+	scanf("%d%d",&a,&b);
+	if(a<b)
+	{
+		for(int i=a;i<=b;i++)
+		{
+			if(i%5==0)
+			{
+				printf("%d\n",i);
+			}
+		}
+	}
+	else if(a>b)
+	{
+		for(int i=b;i<=a;i++)
+		{
+			if(i%5==0)
+			{
+				printf("%d\n",i);
+			}
+		}
+	}
+} 
+
+```
+
+## 基礎題：整數間最大距離 
+```c
+#include <stdio.h>
+int main ()
+{
+	int a,b,c;
+	scanf("%d%d%d",&a,&b,&c);
+	int max=0,min=0;
+	if(a>b && a>c) max=a;
+	if(b>a && b>c) max=b;
+	if(c>a && c>b) max=c;
+	
+	if(a<b && a<c) min=a;
+	if(b<a && b<c) min=b;
+	if(c<a && c<b) min=c;
+	printf("%d\n",max-min);
+}
+
+```
