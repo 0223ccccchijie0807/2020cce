@@ -1,11 +1,11 @@
 #include <stdio.h>
-struct DATA///«Å§i
+struct DATA///å®£å‘Š
 {
-   float x,y,z;///©w¸q¸Ì­±¦³...
+   float x,y,z;///å®šç¾©è£¡é¢æœ‰...
 } point1;
 struct DATA points[5];
-///point1¬OÅÜ¼Æ¡Aªø±o¹³data
-///data¸Ì­±¦³x,y,z
+///point1æ˜¯è®Šæ•¸ï¼Œé•·å¾—åƒdata
+///dataè£¡é¢æœ‰x,y,z
 int main ()
 {
     ///int b;
