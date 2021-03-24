@@ -454,7 +454,8 @@ int main ()
 
 ```
 
-## week4
+# week4
+## 正課
 ## 4-1
 ```c
 #include <stdio.h>
@@ -559,4 +560,170 @@ int main ()
 
 }
 
+```
+## 實習課
+## 1 進階題：除惡務盡 
+```c
+#include <stdio.h>
+int main ()
+{
+	char a[100]={};
+	scanf("%s",&a);
+	for(int i=0;a[i]!=0;i++)
+	{
+		if(a[i]!=50)
+		{
+			printf("%c",a[i]);
+		}
+	}
+	printf("\n");
+}
+```
+## 2 進階題：擲骰統計 
+```c
+#include <stdio.h>
+int main ()
+{
+	char a[100]={};//字串
+	char b[6]={};//數字
+	scanf("%s",&a);
+	for(int i=0;a[i]!=0;i++)
+	{
+		if(a[i]=='1') b[0]++;
+		if(a[i]=='2') b[1]++;
+		if(a[i]=='3') b[2]++;
+		if(a[i]=='4') b[3]++;
+		if(a[i]=='5') b[4]++;
+		if(a[i]=='6') b[5]++;
+	}
+	for(int k=0;k<=5;k++)
+	{
+		printf("%d:%d\n",k+1,b[k]);
+	}
+}
+```
+## 3 進階題：函數找整數的最大數字
+```c
+#include <stdio.h>
+int max_digit(int n)
+{
+	int  ans=0;
+	for(int i=0;n>0;i++)
+	{
+		if(ans<n%10)
+		{
+			ans=n%10;
+		}
+		n=n/10;
+	}
+	return ans;
+}
+int main(void){
+  int n;
+  scanf("%d", &n);
+  printf("[%d]", max_digit(n));
+  return 0;
+}
+
+```
+## 4 進階題：星星等腰三角 
+```c
+#include <stdio.h>
+void many(char c,int n)
+{
+	for(int k=1;k<=n;k++)
+	{
+		printf("%c",c);
+	}
+}
+int main ()
+{
+	int n;
+	scanf("%d",&n);
+	for(int i=1;i<=n;i++)
+	{
+		int star=i*2-1;
+		int space=n-i;
+		many(' ',space);
+		many('*',star);
+		printf("\n");
+	}
+}
+```
+## 5 基礎題：分開整數的每個數字 
+```c
+#include <stdio.h>
+int a[5];
+int main ()
+{
+	int n;
+	scanf("%d",&n);
+	for(int i=0;i<=4;i++)
+	{
+		a[i]=n%10;
+		n=n/10;
+	}
+	for(int i=4;i>=1;i--)
+	{
+		printf("%d   ",a[i]);
+	}
+	printf("%d",a[0]);
+}
+
+```
+## 6 基礎題：字元判別 
+```c
+#include <stdio.h>
+int main ()
+{
+	char n;
+	scanf("%c",&n);
+	if(n>=65 && n<=90)
+	{
+		printf("U");
+	}
+	else if(n>=97 && n<=122)
+	{
+		printf("L");
+	}
+	else if (n>=48 && n<=57)
+	{
+		printf("D");
+	}
+	else printf("O");
+}
+```
+## 7 基礎題：數字之首 
+```c
+#include <stdio.h>
+int main ()
+{
+	int n;
+	int ans=0;
+	scanf("%d",&n);
+	for(int i=0;n>0;i++)
+	{
+		ans=n%10;
+		n=n/10;
+		
+	}
+	printf("%d",ans);
+}
+
+```
+## 8 基礎題：輸出從0到N的偶數 
+```c
+#include <stdio.h>
+int main ()
+{
+	int n;
+	scanf("%d",&n);
+	for(int i=1;i<=n;i++)
+	{
+		if(i%2==0)
+		{
+			printf("%d ",i);
+		}
+	}
+}
 ```
