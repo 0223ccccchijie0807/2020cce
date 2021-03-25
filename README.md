@@ -729,7 +729,7 @@ int main ()
 ```
 # week5
 ## 正課
-## 5-1
+## 5-0
 ```c
 #include <stdio.h>
 char line[20]="233233233233233233";
@@ -746,7 +746,36 @@ int main ()
     printf("\n");
 }
 ```
-## 5-2
+## 5-1
+```c
+#include <stdio.h>
+int main ()
+{
+    char line[10] = "decline";
+    char line2[10]= {'p', 'r', 'o', 'p', 'e', 'r', '\0'};///"proper";
+    printf("%s\n", line);
+    printf("%s\n", line2);
+}
+```
+## 5-2 
+(這是錯誤的程式碼 讓自己有個對比 程式後面議定要寫\0)
+```c
+#include <stdio.h>
+int main ()
+{
+    char line[10] = "decline";
+    char line2[10]= {'p', 'r', 'o', 'p', 'e', 'r', '\0'};///"proper";
+    printf("%s\n", line);
+    printf("%s\n", line2);
+
+    char line3[]="majority這是好的、沒問題的，要多長有多長";
+    char line4[]={'m','a','j','o','r','i','t','y'};///結尾要\0 這是錯誤的這樣寫會亂跑
+    printf("%s\n", line3);
+    printf("你相信嗎? 這是line4:==%s\n", line4);
+}
+
+```
+## 5-3
 ```c
 
 ```
