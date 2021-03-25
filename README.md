@@ -728,7 +728,7 @@ int main ()
 }
 ```
 # week5
-## 正課
+## 正課(字串)
 ## 5-0
 ```c
 #include <stdio.h>
@@ -758,7 +758,7 @@ int main ()
 }
 ```
 ## 5-2 
-(這是錯誤的程式碼 讓自己有個對比 程式後面議定要寫\0)
+(這是錯誤的程式碼 讓自己有個對比 程式後面要寫\0 才不會亂馬)
 ```c
 #include <stdio.h>
 int main ()
@@ -776,6 +776,73 @@ int main ()
 
 ```
 ## 5-3
-```c
 
+```c
+#include <stdio.h>
+int main ()
+{
+    ///了解很多字串
+    char line[5][10] = {"decline","proper","majority","bullet","shop"};///就像表格的5*10
+    char *p;
+    for(int i=0;i<5;i++)
+    {
+        p= line[i];
+        printf("%s\n", line[i]);
+    }
+}
+
+```
+## 5-4
+
+```c
+#include <stdio.h>
+int a[3][3]={ {1,2,3},{4,5,6},{7,8,9} };
+int main ()
+{
+    for(int i=0;i<3;i++)
+    {
+        for(int j=0;j<3;j++)
+        {
+            printf("%d ",a[i][j]);
+        }
+        printf("\n");
+    }
+```
+## 5-5 字串排序
+
+```c
+#include <stdio.h>
+#include <string.h>
+char line[100][10];
+int main ()
+{
+	int N;
+	scanf("%d",&N);
+	//(1)用迴圈全部讀進
+	for(int i=0;i<N;i++)
+	{
+		scanf("%s",line[i]);
+	}
+	
+	//(2)字串順序
+	char temp[10];
+	for(int i=0;i<N;i++)
+	{
+		for(int j=i+1;j<N;j++)
+		{
+			if(strcmp( line[i], line[j] ) > 0 )
+			{//比大小
+				strcpy( temp,line[i] );
+				strcpy( line[i],line[j] );
+				strcpy( line[j],temp );
+			}	
+		}
+	}
+	
+	//(3)把它印出來
+	for(int i=0;i<N;i++)
+	{
+		printf("%s\n",line[i]);
+	}
+}
 ```
