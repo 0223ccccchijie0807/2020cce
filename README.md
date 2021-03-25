@@ -727,3 +727,26 @@ int main ()
 	}
 }
 ```
+# week5
+## 正課
+## 5-1
+```c
+#include <stdio.h>
+char line[20]="233233233233233233";
+int main ()
+{
+    char *p=line;
+    ///scanf("%s",line);
+    for(int i=0;line[i]!=0;i++)
+    {
+        p=&line[i];
+        char c=line[i];
+        if(c!='2') printf("%c",c);
+    }
+    printf("\n");
+}
+```
+## 5-2
+```c
+
+```
