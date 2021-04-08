@@ -5,20 +5,20 @@ int main ()
 {
 	int N;
 	scanf("%d",&N);
-	///(1)¥Î°j°é¥ş³¡Åª¶i
+	///(1)ç”¨è¿´åœˆå…¨éƒ¨è®€é€²
 	for(int i=0;i<N;i++)
 	{
 		scanf("%s",line[i]);
 	}
 
-	///(2)¦r¦ê¶¶§Ç
+	///(2)å­—ä¸²é †åº
 	char temp[10];
 	for(int i=0;i<N;i++)
 	{
 		for(int j=i+1;j<N;j++)
 		{
 			if(strcmp( line[i], line[j] ) > 0 )
-			{///¤ñ¤j¤p
+			{///æ¯”å¤§å°
 				strcpy( temp,line[i] );
 				strcpy( line[i],line[j] );
 				strcpy( line[j],temp );
@@ -26,7 +26,7 @@ int main ()
 		}
 	}
 
-	///(3)§â¥¦¦L¥X¨Ó
+	///(3)æŠŠå®ƒå°å‡ºä¾†
 	for(int i=0;i<N;i++)
 	{
 		printf("%s\n",line[i]);
