@@ -846,8 +846,9 @@ int main ()
 	}
 }
 ```
-
-##7-1 qsort的方法呈現字串排序
+# week7
+## 正課
+## 7-1 qsort的方法呈現字串排序
 ```c
 #include <stdio.h>
 #include <string.h>
