@@ -953,7 +953,7 @@ int main ()
 }
 ```
 ## 10-4
-完成版本
+複雜完成版本
 ```c
 #include <stdio.h>
 char line[10000];
@@ -994,6 +994,49 @@ int main ()
 	for(int i=0;i<26;i++)
 	{
 		if (ans[i]>0)printf("%c %d\n",alphabet[i],ans[i]);
+	}
+}
+```
+## 10-5
+更複雜(聽無)
+```c
+#include <stdlib.h>
+char line[10000];
+typedef struct 
+{
+	int ans;//int ans[26];
+	char c;//char alphabet[]="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+}BOX;
+BOX array[26];
+int compare(const void *p1,const void *p2)
+{
+	if(((BOX*)p1) ->ans > ((BOX*)p2) ->ans) return -1;
+	else if(((BOX*)p1)->ans < ((BOX*)p2) ->ans) return +1;
+	else return 0;
+}
+
+int main ()
+{
+	for(int i=0;i<26;i++) array[i].c='A'+i;
+	int n;
+	scanf("%d\n",&n);
+	for(int i=0;i<n;i++)
+	{
+		gets(line);
+		
+		for(int k=0;line[k]!=0;k++)
+		{
+			char c= line[k];
+			if(c>='A' && c<='Z') array[c-'A'].ans++;
+			else if(c>='a' && c<='z')array[c-'a'].ans++;
+			
+		}  
+	}
+	qsort(array,26,sizeof(BOX),compare);
+	
+	for(int i=0;i<26;i++)
+	{
+		if (array[i].ans>0)printf("%c %d\n",array[i].c,array[i].ans);
 	}
 }
 ```
