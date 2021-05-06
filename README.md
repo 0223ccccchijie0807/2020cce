@@ -1041,7 +1041,8 @@ int main ()
 }
 ```
 # week11
-##11-1
+## 11-1
+用膠帶更替名字
 ```c
 #include <stdio.h>
 unsigned char c;
@@ -1052,6 +1053,28 @@ int main ()
     c='A';
     d=c;
     printf("%c",d);
+
+}
+
+```
+## 11-2
+```c
+#include <stdio.h>
+typedef struct data
+{
+   char c;
+   int ans;
+
+}DATA;
+///struct data listA;
+DATA listA;
+
+int main ()
+{
+    listA.c='A';
+    listA.ans=1;
+
+    printf("%c %d\n",listA.c,listA.ans);
 
 }
 
