@@ -1040,3 +1040,19 @@ int main ()
 	}
 }
 ```
+# week11
+##11-1
+```c
+#include <stdio.h>
+unsigned char c;
+typedef unsigned char uchar;
+uchar d;
+int main ()
+{
+    c='A';
+    d=c;
+    printf("%c",d);
+
+}
+
+```
