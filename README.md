@@ -1102,7 +1102,7 @@ int main ()
 }
 
 ```
-# 11-4
+# 字串指標
 是之前考試的這題 只不過換成 用字串的指標來寫
 ```c
 #include <stdio.h>
@@ -1143,5 +1143,52 @@ int main()
 		}
 	}
 	printf("%d\n", ans );//結尾
+}
+```
+# CPE題目10062 
+## 步驟一
+```c
+#include <stdio.h>
+char line[1001];
+int main ()
+{
+	for(int t=0;gets(line)!=NULL;t++)//中止式不等於失敗
+	{
+		if(t>0) printf("\n");//跳行 火車理論
+		printf("blabla\n");
+		printf("blabla\n");
+		printf("blabla\n");
+	}
+	
+}
+## 步驟二
+```c
+#include <stdio.h>
+char line[1001];
+int ans[256];
+int main ()
+{
+	for(int t=0;gets(line)!=NULL;t++)//中止式不等於失敗
+	{
+		for(int i=0;i<256;i++)//step5
+		{
+			ans[i]=0;
+		}
+		//step3
+		for(int i=0;line[i]!=0;i++)
+		{
+			char c=line[i];
+			ans[c]++;
+		}
+		//step2
+		if(t>0) printf("\n");//跳行
+		//step4
+		for(int i=0;i<256;i++)
+		{
+			if(ans[i]>0) printf("%d %d\n",i,ans[i]);
+		}
+	}
+	
+	
 }
 ```
