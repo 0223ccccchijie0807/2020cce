@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 int compare( const void*p1, const void*p2)
-{ ///Âà¦¨ ¡u¾ã¼Æªº«ü¼Ð¡v±æ»·Ãè¡A·Ç¬P¬Ý¨ìªº¾ã¼Æ
+{ ///è½‰æˆ ã€Œæ•´æ•¸çš„æŒ‡æ¨™ã€æœ›é é¡ï¼Œæº–æ˜Ÿçœ‹åˆ°çš„æ•´æ•¸
     int d1=*( (int*)p1 );
     int d2=*( (int*)p2 );
     if(d1>d2) return 1;
