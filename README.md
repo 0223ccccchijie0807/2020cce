@@ -1271,7 +1271,7 @@ int main ()
 					ascii[j]=c;
 					
 				}
-				if( ans[i]==ans[j] && ans[i]< ascii[j])
+				if( ans[i]==ans[j] && ascii[i]< ascii[j])//第二個條件 讓他從大到小排
 				{
 					int temp=ans[i];
 					ans[i]=ans[j];
