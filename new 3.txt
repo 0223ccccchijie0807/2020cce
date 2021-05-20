@@ -1,0 +1,15 @@
+void setup() //只做一次設定
+{
+  size(1024,400);
+}
+void draw () //互動版本每秒畫60幅
+{
+    if( mousePressed ) background (255,0,255);//按下去紫色
+    else background (62,141,247);//否則淡藍色
+    text(a,512,200);//畫出文字
+}
+int a=0;
+void mousePressed ()
+{
+  a++;
+}
