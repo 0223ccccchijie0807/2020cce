@@ -28,7 +28,7 @@ int main ()
 					ascii[j]=c;
 
 				}
-				if( ans[i]==ans[j] && ascii[i]< ascii[j])//²Ä¤G­Ó±ø¥ó Åı¥L±q¤j¨ì¤p±Æ
+				if( ans[i]==ans[j] && ascii[i]< ascii[j])//ç¬¬äºŒå€‹æ¢ä»¶ è®“ä»–å¾å¤§åˆ°å°æ’
 				{
 					int temp=ans[i];
 					ans[i]=ans[j];
