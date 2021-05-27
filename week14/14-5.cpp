@@ -4,7 +4,7 @@ void setup()
     size(500,200);
     textSize(30);
     for(int i=0;i<47;i++) a[i]=i;
-    //Åýa[i]ªº°}¦C¸Ì ­n¥ý©ñ¾ã»ô¹ïÀ³ªº¼Æ¦r
+    //è®“a[i]çš„é™£åˆ—è£¡ è¦å…ˆæ”¾æ•´é½Šå°æ‡‰çš„æ•¸å­—
     for(int i=0;i<1000;i++)
     {
       int i1=(int)random(47);
@@ -15,7 +15,7 @@ void setup()
 int N=0;
 void draw ()
 {
-  textAlign(CENTER,CENTER);//¤å¦r¹ï»ô
+  textAlign(CENTER,CENTER);//æ–‡å­—å°é½Š
   background(#23CBA0);
     for(int i=0;i<N;i++){
       fill(255); ellipse(i*80+40,100,55,55);
