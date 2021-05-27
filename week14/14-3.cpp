@@ -18,5 +18,5 @@ void mousePressed()
 {
   i1=(int)random(10);
   i2=(int)random(10);
-  int temp=a[i1]; a[i1]=a[i2]; a[i2]=temp;//�洫
+  int temp=a[i1]; a[i1]=a[i2]; a[i2]=temp;//¥æ´«
 }
